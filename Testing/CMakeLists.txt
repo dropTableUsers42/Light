@@ -25,6 +25,12 @@ target_include_directories(Test PUBLIC googletest/googletest/include/)
 add_subdirectory(googletest)
 target_link_libraries(Test gtest_main)
 
+# include physicc
+target_include_directories(Test PUBLIC ../Physicc/include/)
+target_include_directories(Test PUBLIC ../shared/libs/glm/)
+
+target_link_libraries(Test Physicc)
+
 # Set Gtest options
 SET(BUILD_GMOCK OFF)
 set(INSTALL_GTEST OFF)
